@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Matthew Geddes
+  description: A role to trust one or more TLS certificate authorities.
+  company: Platina Systems
+  license: GPL-2.0-only
+  min_ansible_version: 2.7
+    - name: Ubuntu
+      versions:
+          - all
+    - name: Debian
+      versions:
+          - all
+    - name: EL
+      versions:
+          - all
+  galaxy_tags: ["ssl-tls", "ca-cert", "pki"]
+dependencies: []

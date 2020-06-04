@@ -1,0 +1,25 @@
+---
+---
+- name: CA Certificate Directory
+  file:
+      state: directory
+      mode: 0755
+      path: "/usr/local/share/ca-certificates/{{ ca.name }}"
+  loop:
+      "{{ ca_certs }}"
+  loop_control:
+      loop_var: ca
+- name: Public Certificate File
+  copy:
+      src: "{{ ca.filename }}"
+      dest: "/usr/local/share/ca-certificates/{{ ca.name }}/CA.crt"
+      mode: 0644
+  register: ca_cert
+  loop:
+      "{{ ca_certs }}"
+  loop_control:
+      loop_var: ca
+- name: Update Trusted CA Certificates Store
+  command: update-ca-certificates
+  when: ca_cert.changed
+
