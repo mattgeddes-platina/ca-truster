@@ -22,4 +22,3 @@
 - name: Update Trusted CA Certificates Store
   command: update-ca-certificates
   when: ca_cert.changed
-
