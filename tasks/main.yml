@@ -1,5 +1,4 @@
 ---
----
 - name: CA Certificate Directory
   file:
       state: directory
