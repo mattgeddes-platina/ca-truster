@@ -18,6 +18,3 @@
       "{{ ca_certs }}"
   loop_control:
       loop_var: ca
-- name: Update Trusted CA Certificates Store
-  command: update-ca-certificates
-  when: ca_cert.changed

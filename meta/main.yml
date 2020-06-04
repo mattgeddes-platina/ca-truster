@@ -14,5 +14,5 @@ galaxy_info:
     - name: EL
       versions:
           - all
-  galaxy_tags: ["ssl-tls", "ca-cert", "pki"]
+  galaxy_tags: ["ssl", "tls", "cacert", "pki"]
 dependencies: []
